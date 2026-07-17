@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Funny Surprise</title>
+
+<style>
+body{
+    background:pink;
+    text-align:center;
+    font-family:Arial;
+}
+
+h1{
+    margin-top:50px;
+}
+
+button{
+    position:absolute;
+    padding:12px 20px;
+    font-size:18px;
+    background:#ff1493;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+#surprise{
+    display:none;
+    margin-top:100px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🎁 Tumhare Liye Ek Surprise Hai! 🎁</h1>
+<h2 id="msg" style="color:blue;"></h2>
+
+<button id="btn" onclick="moveButton()"
+style="top:250px; left:45%;">
+Open Surprise
+</button>
+
+<div id="surprise">
+    <a href="Arati.html">Open Surprise..</a>
+    </div>
+
+<script>
+let click = 0;
+
+function moveButton(){
+    click++;
+
+    let btn = document.getElementById("btn");
+
+    if(click==1){
+    btn.style.top="420px";
+    document.getElementById("msg").innerHTML =
+    "😜 Arre itni jaldi kya hai? Ek aur baar click karo!";
+}
+else if(click==2){
+    btn.style.top="320px";
+    document.getElementById("msg").innerHTML =
+    "😂 Abhi nahi! Ek aur baar click karo.";
+}
+else{
+    document.getElementById("msg").innerHTML =
+    "🎉 Surprise Open Ho Raha Hai...";
+
+    setTimeout(function(){
+        window.location.href = "Arati.html";
+    },1000);
+}
+}
+</script>
+
+</body>
+</html>
